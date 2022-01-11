@@ -1,0 +1,12 @@
+version: "2"
+services:
+   led:
+    container_name: vue-webrtc
+    image: vue-webrtc
+    environment:
+     - GATEWAY_API=接口地址
+    ports:
+     - "8090:80"
+    volumes:
+     - ./nginx/templates:/etc/nginx/templates
+     - ./nginx/conf:/etc/nginx/conf.d
